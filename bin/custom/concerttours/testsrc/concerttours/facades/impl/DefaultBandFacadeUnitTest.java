@@ -1,21 +1,19 @@
 package concerttours.facades.impl;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
-import de.hybris.bootstrap.annotations.UnitTest;
-import de.hybris.platform.servicelayer.model.ModelService;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 import concerttours.data.BandData;
 import concerttours.model.BandModel;
 import concerttours.service.BandService;
+import de.hybris.bootstrap.annotations.UnitTest;
+import de.hybris.platform.servicelayer.model.ModelService;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 @UnitTest
 public class DefaultBandFacadeUnitTest {
@@ -90,7 +88,7 @@ public class DefaultBandFacadeUnitTest {
     }
 
     @Test
-    public void testGetBand(BandData dto) {
+    public void testGetBand() {
         // create test band
         final BandModel band = configTestBand();
         // We tell Mockito we expect BandService's method getBandForCode to be called, and that when it is, the test band should be returned
