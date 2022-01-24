@@ -36,8 +36,8 @@ public class BandAlbumSalesEventListenerIntegrationTest extends ServicelayerTest
             Thread.sleep(TimeUnit.SECONDS.toMillis(1));
         } catch (InterruptedException exc) {
         }
-        createCoreData();
-        createDefaultCatalog();
+        //createCoreData();
+        //createDefaultCatalog();
     }
 
     @Test(expected = ModelSavingException.class)

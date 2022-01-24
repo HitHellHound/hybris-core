@@ -17,6 +17,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.annotation.Resource;
 import java.util.Collection;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -63,7 +64,7 @@ public class DefaultBandServiceIntegrationTest extends ServicelayerTest {
         bandModel.setCode(BAND_CODE);
         bandModel.setName(BAND_NAME);
         bandModel.setAlbumSales(ALBUMS_SOLD);
-        bandModel.setHistory(BAND_HISTORY);
+        bandModel.setHistory(BAND_HISTORY, Locale.ENGLISH);
     }
 
     @Test(expected = UnknownIdentifierException.class)
@@ -94,7 +95,7 @@ public class DefaultBandServiceIntegrationTest extends ServicelayerTest {
      */
     @Test
     public void testBandServiceTours() throws Exception {
-        createCoreData();
+        //createCoreData();
         importCsv("/impex/concerttours-bands.impex", "utf-8");
         importCsv("/impex/concerttours-yBandTour.impex", "utf-8");
         final BandModel band = bandService.getBandForCode("A001");
