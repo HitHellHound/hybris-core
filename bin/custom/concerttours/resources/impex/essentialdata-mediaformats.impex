@@ -1,0 +1,6 @@
+UPDATE GenericItem[processor = de.hybris.platform.commerceservices.impex.impl.ConfigPropertyImportProcessor]; pk[unique = true]
+
+
+INSERT_UPDATE MediaFormat;qualifier[unique=true];name
+                         ;bandList;Band List Format
+                         ;bandDetail;Band Detail Format
