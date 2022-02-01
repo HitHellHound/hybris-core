@@ -30,6 +30,13 @@ INSERT_UPDATE Producer;surname[unique=true];name
 # Insert Products
 INSERT_UPDATE Concert;code[unique=true];name;date[dateformat=dd.MM.yyyy];venue;concertType(code);producers(surname);baseProduct(code);$catalogVersion;$approved;
                      ;20170101;Grand Tour - Munich;03.02.2017;"hybris Munich, Germany";openair;Fett;201701;
+                     ;20170101;Grand Tour - Munich;03.02.2017;"hybris Munich, Germany";openair;Fett;201701;
+                     ;20170101;Grand Tour - Munich;03.02.2017;"hybris Munich, Germany";openair;Fett;201701;
+                     ;20170101;Grand Tour - Munich;03.02.2017;"hybris Munich, Germany";openair;Fett;201701;
+                     ;20170101;Grand Tour - Munich;03.02.2017;"hybris Munich, Germany";openair;Fett;201701;
+                     ;20170101;Grand Tour - Munich;03.02.2017;"hybris Munich, Germany";openair;Fett;201701;
+                     ;20170101;Grand Tour - Munich;03.02.2017;"hybris Munich, Germany";openair;Fett;201701;
+                     ;20170101;Grand Tour - Munich;03.02.2017;"hybris Munich, Germany";openair;Fett;201701;
                      ;20170102;Grand Tour - London;21.03.2017;"hybris London, UK";openair;Martin;201701;
                      ;20170103;Grand Tour - Montreal;15.06.2017;"hybris Montreal, Canada";indoor;Rur;201701;
                      ;20170104;Grand Tour - Gliwice;04.11.2017;"hybris Gliwice, Poland";indoor;Rur;201701;
