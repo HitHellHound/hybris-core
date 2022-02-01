@@ -9,13 +9,20 @@
     <p>${tour.description}</p>
     <p>Schedule:</p>
     <table>
-        <tr><th>Venue</th><th></th><th>Date</th><th>Days Until</th></tr>
+        <tr>
+            <th>Venue</th>
+            <th></th>
+            <th>Date</th>
+            <th>Days Until</th>
+            <th>Producer</th>
+        </tr>
         <c:forEach var="concert" items="${tour.concerts}">
             <tr>
                 <td>${concert.venue}</td>
                 <td>${concert.type}</td>
                 <td><fmt:formatDate pattern="dd MMM yyyy" value="${concert.date}" /></td>
                 <td>${concert.countDown}</td>
+                <td>${concert.producer}</td>
             </tr>
         </c:forEach>
     </table>

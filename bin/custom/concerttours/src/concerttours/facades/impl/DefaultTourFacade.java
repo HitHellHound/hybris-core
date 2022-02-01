@@ -1,5 +1,6 @@
 package concerttours.facades.impl;
 
+import concerttours.model.ProducerModel;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.product.ProductService;
 import de.hybris.platform.variants.model.VariantProductModel;
@@ -37,6 +38,10 @@ public class DefaultTourFacade implements TourFacade {
                     summary.setDate(concert.getDate());
                     summary.setVenue(concert.getVenue());
                     summary.setType(concert.getConcertType() == ConcertType.OPENAIR ? "Outdoors" : "Indoors");
+                    if (concert.getProducers().stream().findAny().orElse(null) != null) {
+                        ProducerModel producer = concert.getProducers().stream().findAny().get();
+                        summary.setProducer(producer.getFullName());
+                    }
                     summary.setCountDown(concert.getDaysUntil());
                     concerts.add(summary);
                 }
